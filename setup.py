@@ -1,12 +1,12 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='gym-ur5_gripper',
-    version='0.0.1',
-    description='A gym mujoco environment of ur5 3 finger gripper',
-    author='Cong Wang',
-    author_email='wangcongrobot@gmail.com',
-    install_requires=['gym==0.14.0', 
-                      'numpy',
-                      'mujoco_py==2.0.2.2']
+    name='gym_ur5_gripper',
+    version='0.1',
+    packages=find_packages(include=['gym_ur5_gripper', 'gym_ur5_gripper.*']),
+    install_requires=[
+        'gym',
+        'pybullet',
+        'numpy',
+    ],
 )
